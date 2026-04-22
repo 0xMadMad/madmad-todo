@@ -26,7 +26,50 @@ class Task:
         self.importance = importance
         
     def __str__(self) -> str:
-        return f" {self.name} ({self.importance}/{Task.max_importance}) [{self.task_status.name}] : \"{self.description}\"\n"
+        result = ""
+        
+        width = 15  # the minimum size is 15 (for the banner to fit properly)
+        name_chunk = (len(self.name) / width).__ceil__()
+        desc_chank = (len(self.description) / width).__ceil__()
+        bigger_chank = name_chunk if name_chunk>desc_chank else desc_chank
+
+        name_ptr = 0
+        desc_ptr = 0
+        middles_flag = False
+
+        for _ in range(bigger_chank):
+            result += 8*' '
+            now_part = self.name[name_ptr:name_ptr+width]
+            if(len(now_part) == 0):
+                result += width*' '
+            elif(len(now_part) < width):
+                result += now_part
+                result += (width - len(now_part))*' '
+            else:
+                result += now_part
+            result += " | "
+            name_ptr+=width
+
+            if(not middles_flag):
+                result+=f"({self.importance}/{Task.max_importance}) | [{self.task_status.name}] | "
+                middles_flag = True
+            else:
+                result+="        |                 | "
+
+            now_part = self.description[desc_ptr:desc_ptr+width]
+            if(len(now_part) == 0):
+                result += width*' '
+            elif(len(now_part) < width):
+                result += now_part
+                result += (width - len(now_part))*' '
+            else:
+                result += now_part
+            desc_ptr+=width
+
+            result += '\n'
+
+        result += '\n'
+        return result
 
     def change_status(self) -> Status:
         if(self.task_status == Status.NOT_COMPLETED):
@@ -76,9 +119,9 @@ class TaskList:
         if(len(self.list_of_tasks)<=0):
             return f" {self.name}: (empty)\n"
         else:
-            result = f" {self.name}:\n"
+            result = f"  - {self.name}:\n"
             for task in self.list_of_tasks:
-                result+=('\t'+str(task))
+                result+=(str(task))
             return f"{result}\n"
     
     def find_task(self, t_name:str) -> Union[Task, Status]:
@@ -172,4 +215,4 @@ class ToDoManager:
 if(__name__ == '__main__'):
     print("\nuse this file as module.\n")
 
-#MadMad_175
+#MadMad_218
