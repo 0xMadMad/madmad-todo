@@ -1,5 +1,5 @@
 from messages import MESSAGES as msg
-from messages import ASCII_ART, PROGRESS
+from messages import BANNER, PROGRESS
 from models import *
 import os 
 import platform
@@ -46,7 +46,7 @@ def path_check(path:str):
 # app lifecycle functions :
 def app_starter():
     if(clear_command_line() != Status.ERROR):
-        print(ASCII_ART, msg["first welcome"].format(USER_NAME))
+        print(BANNER, msg["first welcome"].format(USER_NAME))
         return Status.SUCCESS
     return Status.ERROR
     # checked in app.py -> if not supported, the program won’t run
@@ -55,7 +55,7 @@ nothing = lambda : None
 
 def refresh_only():
     clear_command_line()
-    print(ASCII_ART)
+    print(BANNER)
 
 def do_and_refresh_menu(func:Callable, menu_display_func:Callable, head_before_display:any = None):
     refresh_only()
