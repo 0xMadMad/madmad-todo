@@ -33,7 +33,7 @@ Designed to help you manage multiple task lists and tasks with ease.
 
 ---
 
-## ⚙️ How It Works ❓
+## How It Works ❓
 1. create **task lists** to organize your tasks by project or category
 2. each task includes:
    - **Name:** quick identifier
