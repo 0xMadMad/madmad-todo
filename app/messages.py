@@ -14,9 +14,9 @@ if __name__ == "__main__":
 
 
 PROGRESS = {
-    "ALL" : ["Y","YES","CONTINUE","GO","OK","SURE","N","NO","STOP","QUIT","EXIT","NOT CONTINUE"],
-    "CONTINUE": ["Y", "YES", "CONTINUE", "GO", "OK", "SURE"],
-    "STOP": ["N", "NO", "STOP", "QUIT", "EXIT", "NOT CONTINUE"]
+    "ALL" : ("Y","YES","CONTINUE","GO","OK","SURE","N","NO","STOP","QUIT","EXIT","NOT CONTINUE"),
+    "CONTINUE": ("Y", "YES", "CONTINUE", "GO", "OK", "SURE"),
+    "STOP": ("N", "NO", "STOP", "QUIT", "EXIT", "NOT CONTINUE")
 }
 
 
@@ -76,15 +76,15 @@ MESSAGES = {
     "t not found" : " task \"{}\" was not found.\n",
     "t name duplicated" : " task name is already \"{}\"!\n",
     "t name empty" : " name can not be empty\n",
-    "t desc duplicated" : " task with this dicription already exists!\n",
-    "t imp duplicated" : " task already have that importance!\n",
+    "t desc duplicated" : " task already have this description!\n",
+    "t imp duplicated" : " task already have this importance!\n",
     "t wrong imp" : " wrong importance value. importance must be an integer between 1 and 10.\n",
     "t imp not int" : " wrong importance value. importance must be an integer\n",
     "t imp out of range" : " wrong importance value. importance must be between 1 and 10.\n",
     "t status not change" : " have a problem with status of \"{}\"\n",
     #-------------------------------------DATA INPUTS--------------------------------------------
     "export to excel path input" : "\n enter the path (\\path) :\n >>",
-    "export to excel name input" : "\n enter the path (file_name.xls) :\n >>",
+    "export to excel name input" : "\n enter the file name (file_name.xls) :\n >>",
     "export to csv path input" : "\n enter the path (\\path) :\n >>",
     "export to csv name input" : "\n enter the file name (file_name.csv) :\n >>",
     "export input again" : " do you want enter path again?(y/n): ",
