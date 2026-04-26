@@ -1,16 +1,16 @@
-# 📝 MadMad ToDo App
+# MadMad ToDo App
 a simple and interactive CLI-based ToDo app built with Python.  
 Designed to help you manage multiple task lists and tasks with ease.
 
 ---
 
-## 📌 Version
+## Version
 **Current Version:** `0.1.0 (MVP)`  
 **Python:** >=3.10.0 (tested on 3.13.1)
 
 ---
 
-## 🎯 Features
+## Features
 - 🗂 create, view, and delete multiple task lists
 - ✅ add, view, and delete tasks with **name, description, and importance (1-10)**
 - 🔄 toggle task status (completed|not completed)
@@ -21,7 +21,7 @@ Designed to help you manage multiple task lists and tasks with ease.
 
 ---
 
-## 📺 Screenshots
+## Screenshots
 ### main menu
 ![Main menu — محیط اصلی](assets/screen-shots/main_menu.png)
 
@@ -33,7 +33,7 @@ Designed to help you manage multiple task lists and tasks with ease.
 
 ---
 
-## ⚙️ How It Works ❓
+## How It Works ❓
 1. create **task lists** to organize your tasks by project or category
 2. each task includes:
    - **Name:** quick identifier
@@ -45,7 +45,7 @@ Designed to help you manage multiple task lists and tasks with ease.
 
 ---
 
-## 🚀 Installation
+## Installation
 ```bash
 # Clone the repository
 git clone https://github.com/HiDMadMad/madmad-todo.git
@@ -59,7 +59,7 @@ python app/app.py
 ```
 ---
 
-## 📖 Quick Start
+## Quick Start
 1. run the app: `python app/app.py`
 2. press 1 to create your first task list
 3. enter a name ("Work Tasks")
@@ -70,14 +70,14 @@ python app/app.py
 
 ---
 
-## 🛠️ Current Status
+## Current Status
 
 ✔ core features are implemented <br>
 👨‍💻 more features are still in development
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 ```
 madmad-todo/
 ├── app/
@@ -98,7 +98,7 @@ madmad-todo/
 
 ---
 
-## 🙏 Contributions
+## Contributions
 feedback, ideas, and pull requests are welcome! <br>
 feel free to open an issue or contribute.
 
